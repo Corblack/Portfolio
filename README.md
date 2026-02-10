@@ -11,7 +11,7 @@
   <br />
 
   <p>
-    <b>Mon portfolio personnel développé from scratch.</b><br>
+    <b>Mon portfolio personnel</b><br>
     Un design sombre, immersif et axé sur l'expérience utilisateur pour présenter mes projets et compétences.
   </p>
 </div>
