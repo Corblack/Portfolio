@@ -55,6 +55,7 @@ Le site a été conçu avec une esthétique **"Deep Space / Cyber"** mettant l'a
 ├── 📄 projets.css       # Styles spécifiques à la galerie (Extension)
 ├── 📄 fonts.css         # Gestion des typographies
 └── 📁 media/            # Images, CV PDF et Assets graphiques
+```
 
 
 ## 🚀 Installation & Lancement
@@ -74,3 +75,6 @@ Si vous souhaitez tester le projet localement :
 ## 📬 Contact
 
 **Johann Paimboeuf** - Étudiant en Développement Web @Coding Factory
+
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/johann-paimboeuf)
+[![GitHub](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/Corblack)
