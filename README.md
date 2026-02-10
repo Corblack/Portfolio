@@ -1,77 +1,76 @@
 <div align="center">
-  
-  <h1>👨‍💻 Salut, je suis Johann Paimboeuf</h1>
-  
+  <br />
+  <h1>⚡ Portfolio V1 | Johann Paimboeuf</h1>
+  <br />
+
+  <a href="https://LIEN-DE-TON-SITE-VERCEL.app">
+    <img src="https://img.shields.io/badge/VOIR%20LE%20SITE%20EN%20LIVE-3b82f6?style=for-the-badge&logo=vercel&logoColor=white" alt="Live Demo">
+  </a>
+
+  <br />
+  <br />
+
   <p>
-    <b>Développeur Web & Mobile | Creative Coding | Étudiant @Coding Factory</b>
-  </p>
-
-  <a href="https://ton-portfolio.vercel.app">
-    <img src="https://img.shields.io/badge/VOIR%20MON%20PORTFOLIO-3b82f6?style=for-the-badge&logo=googlechrome&logoColor=white" alt="Portfolio">
-  </a>
-  <a href="https://www.linkedin.com/in/johann-paimboeuf">
-    <img src="https://img.shields.io/badge/LINKEDIN-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn">
-  </a>
-  <a href="mailto:johann.paimboeuf@gmail.com">
-    <img src="https://img.shields.io/badge/EMAIL-D14836?style=for-the-badge&logo=gmail&logoColor=white" alt="Email">
-  </a>
-
-  <br><br>
-
-  <p align="center">
-    Actuellement en <b>Bachelor 1</b>, je me spécialise dans le développement Fullstack et l'expérience utilisateur.<br>
-    J'aime quand le code est propre et que le design est impactant. ⚡
+    <b>Mon portfolio personnel développé from scratch.</b><br>
+    Un design sombre, immersif et axé sur l'expérience utilisateur pour présenter mes projets et compétences.
   </p>
 </div>
 
 ---
 
-### 🛠️ L'Arsenal Technique
+## 🎨 Aperçu & Design
+
+Le site a été conçu avec une esthétique **"Deep Space / Cyber"** mettant l'accent sur les effets de lumière, la transparence et la fluidité.
+
+### ✨ Fonctionnalités Clés
+- **Thème Sombre Profond** : Palette de couleurs optimisée pour le confort visuel et le style (`#05070a`).
+- **Glassmorphism** : Utilisation intensive de `backdrop-filter: blur()` pour des effets de verre dépoli sur le header et les cartes.
+- **Animations CSS** :
+  - *Cyber Strip* : Bandeau défilant infini.
+  - *Glow Effects* : Lueurs néons au survol des éléments.
+  - *Smooth Scroll* : Navigation fluide.
+- **Responsive Design** : Grille CSS (`display: grid`) adaptative pour Mobile, Tablette et Desktop.
+- **No-Framework** : Performance maximale sans librairie lourde, juste du HTML/CSS/JS pur.
+
+---
+
+## 🛠️ Stack Technique
 
 <div align="center">
-  
   <img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white">
   <img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white">
   <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black">
-  <img src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB">
-
-  <br>
-
-  <img src="https://img.shields.io/badge/PHP-777BB4?style=for-the-badge&logo=php&logoColor=white">
-  <img src="https://img.shields.io/badge/MySQL-00000F?style=for-the-badge&logo=mysql&logoColor=white">
-  <img src="https://img.shields.io/badge/C%23-239120?style=for-the-badge&logo=c-sharp&logoColor=white">
-  <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white">
-
-  <br>
-
-  <img src="https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white">
-  <img src="https://img.shields.io/badge/Adobe%20Creative%20Cloud-DA4943?style=for-the-badge&logo=adobecreativecloud&logoColor=white">
-  <img src="https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white">
-  
+  <img src="https://img.shields.io/badge/Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white">
 </div>
 
 ---
 
-### 🚀 Projets en Vedette
+## 📂 Structure du Projet
 
-| Projet | Stack | Description |
-| :--- | :---: | :--- |
-| **[TeamLime (Versus Fighting)](https://github.com/Corblack/TeamLime)** | `C#` `GameDev` | Un jeu de combat 2D développé from scratch. Gestion physique, collisions et animations fluides. |
-| **[Insta Checker Tool](https://github.com/Corblack/Insta-Checker)** | `Python` `Automation` | Outil d'automatisation pour gérer et analyser des comptes via API privée. |
-| **[Game of Life](https://github.com/Corblack/game-of-life)** | `Algo` `Simulation` | Reproduction optimisée de l'automate cellulaire de Conway. |
-| **[Portfolio V1](https://github.com/Corblack/Portfolio)** | `HTML/CSS` `Design` | Mon site personnel avec thème sombre, effets Glassmorphism et animations CSS. |
+```bash
+📁 Portfolio/
+├── 📄 index.html        # Page d'accueil (Hero, Skills, Présentation)
+├── 📄 projets.html      # Galerie complète des projets (Grid Layout)
+├── 📄 styles.css        # Styles globaux & Accueil (Variables, Reset, Animations)
+├── 📄 projets.css       # Styles spécifiques à la galerie (Extension)
+├── 📄 fonts.css         # Gestion des typographies
+└── 📁 media/            # Images, CV PDF et Assets graphiques
+
+
+## 🚀 Installation & Lancement
+
+Si vous souhaitez tester le projet localement :
+
+1. **Cloner le repository**
+   ```bash
+   git clone [https://github.com/Corblack/Portfolio.git](https://github.com/Corblack/Portfolio.git)```
+2. **Ouvrir le projet**
+   Il suffit d'ouvrir le fichier `index.html` dans votre navigateur préféré.
+
+   > **Astuce :** Utilisez l'extension "Live Server" sur VS Code pour une meilleure expérience.
 
 ---
 
-### 📊 GitHub Stats
+## 📬 Contact
 
-<div align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=Corblack&show_icons=true&theme=tokyonight&hide_border=true&bg_color=0d1117" alt="Corblack's Github Stats" height="180"/>
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Corblack&layout=compact&theme=tokyonight&hide_border=true&bg_color=0d1117" alt="Top Langs" height="180"/>
-</div>
-
-<br>
-
-<div align="center">
-  <img src="https://komarev.com/ghpvc/?username=Corblack&label=Vues+du+profil&color=3b82f6&style=flat-square" alt="Profile views" />
-</div>
+**Johann Paimboeuf** - Étudiant en Développement Web @Coding Factory
