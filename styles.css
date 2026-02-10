@@ -1,0 +1,588 @@
+/* =========================================
+   1. CONFIGURATION & VARIABLES
+   ========================================= */
+:root {
+    /* Couleurs */
+    --bg-body: #05070a;
+    --bg-card: #0e121a;
+    --bg-glass: rgba(5, 7, 10, 0.85);
+
+    --text-main: #e2e8f0;
+    --text-muted: #64748b;
+
+    --accent: #3b82f6;
+    --glow: #60a5fa;
+    --gradient-text: linear-gradient(90deg, #ffffff, #3b82f6);
+
+    /* Animation Curve */
+    --ease: cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+/* =========================================
+   2. BASE & RESET
+   ========================================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--bg-body);
+    /* Pas de grille, fond uni profond */
+
+    font-family: "poppins_regular", sans-serif;
+    color: var(--text-main);
+    line-height: 1.7;
+    overflow-x: hidden;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--bg-body);
+}
+
+::-webkit-scrollbar-thumb {
+    background: #1e293b;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--accent);
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: all 0.3s ease-in-out;
+    position: relative;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+/* =========================================
+   3. HEADER (NAVIGATION)
+   ========================================= */
+.header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 20px 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    background: var(--bg-glass);
+    backdrop-filter: blur(15px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.03);
+    z-index: 1000;
+    animation: ghostRise 1s var(--ease) forwards;
+}
+
+.header a {
+    font-size: 0.9rem;
+    font-family: "poppins_semi_bold";
+    letter-spacing: 0.5px;
+    color: var(--text-muted);
+}
+
+.header a:hover {
+    color: #fff;
+    text-shadow: 0 0 10px rgba(59, 130, 246, 0.6);
+}
+
+.header a img {
+    height: 32px;
+    filter: drop-shadow(0 0 5px rgba(59, 130, 246, 0.5));
+}
+
+/* =========================================
+   4. HERO SECTION (ACCUEIL)
+   ========================================= */
+#presentation {
+    min-height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding-top: 80px;
+}
+
+#nom {
+    font-family: "poppins_bold";
+    font-size: 4rem;
+    letter-spacing: -2px;
+    margin-bottom: 10px;
+
+    background: var(--gradient-text);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    opacity: 0;
+    animation: ghostRise 1s var(--ease) 0.2s forwards;
+}
+
+#poste {
+    font-family: "poppins_semi_bold";
+    font-size: 1.5rem;
+    color: var(--text-muted);
+    margin-bottom: 40px;
+    font-weight: 400;
+    opacity: 0;
+    animation: ghostRise 1s var(--ease) 0.4s forwards;
+}
+
+#poste::after {
+    content: "";
+    display: block;
+    width: 50px;
+    height: 3px;
+    background: var(--accent);
+    margin: 20px auto 0;
+    border-radius: 2px;
+}
+
+#moi {
+    max-width: 600px;
+    color: var(--text-muted);
+    font-size: 1.1rem;
+    margin: 0 auto;
+    opacity: 0;
+    animation: ghostRise 1s var(--ease) 0.6s forwards;
+}
+
+/* =========================================
+   5. MARQUEE (CYBER STRIP)
+   ========================================= */
+.marquee-wrapper {
+    width: 100vw;
+    max-width: 100%;
+    overflow: hidden;
+    background: rgba(5, 7, 10, 0.6);
+    backdrop-filter: blur(5px);
+    border-top: 1px solid rgba(59, 130, 246, 0.3);
+    border-bottom: 1px solid rgba(59, 130, 246, 0.3);
+    padding: 20px 0;
+    margin: 60px 0;
+    position: relative;
+    z-index: 5;
+    transform: rotate(-1deg);
+    transition: all 0.3s ease-in-out;
+}
+
+.marquee-wrapper:hover {
+    background: rgba(59, 130, 246, 0.05);
+}
+
+.marquee-track {
+    display: flex;
+    white-space: nowrap;
+    will-change: transform;
+    animation: scrollInfinite 25s linear infinite;
+}
+
+
+.marquee-item {
+    font-family: var(--font-bold);
+    font-size: 1.5rem;
+    color: #fff;
+    padding: 0 40px;
+    display: flex;
+    align-items: center;
+    letter-spacing: 2px;
+}
+
+.marquee-item.outline {
+    color: transparent;
+    -webkit-text-stroke: 1px rgba(255, 255, 255, 0.5);
+}
+
+.separator {
+    color: var(--accent);
+    margin-left: 40px;
+    font-size: 1.2rem;
+    text-shadow: 0 0 10px rgba(59, 130, 246, 0.8);
+}
+
+/* =========================================
+   6. SKILLS GRID & RIBBON
+   ========================================= */
+#skills {
+    max-width: 1000px;
+    margin: 100px auto;
+    padding: 0 20px;
+    text-align: center;
+}
+
+.section-title {
+    font-size: 2rem;
+    margin-bottom: 50px;
+    font-family: var(--font-bold);
+    color: #fff;
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 20px;
+}
+
+.skill-card {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    padding: 30px 20px;
+    border-radius: 12px;
+    transition: all 0.3s ease-in-out;
+    cursor: default;
+    position: relative;
+    overflow: hidden;
+}
+
+.skill-card:hover {
+    background: rgba(59, 130, 246, 0.1);
+    border-color: var(--accent);
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(59, 130, 246, 0.15);
+}
+
+.skill-card h3 {
+    font-size: 1.1rem;
+    color: #fff;
+    margin-bottom: 5px;
+    font-family: var(--font-semi);
+}
+
+.skill-card p {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+}
+
+/* Styles spécifiques pour les stacks en apprentissage */
+.skill-card.future-stack {
+    border-color: rgba(59, 130, 246, 0.2);
+}
+
+.skill-card.future-stack h3 {
+    color: var(--text-muted);
+}
+
+.skill-card.future-stack:hover {
+    background: rgba(59, 130, 246, 0.05);
+    border-color: var(--accent);
+}
+
+/* Le Ruban diagonal "EN COURS" */
+.ribbon {
+    position: absolute;
+    top: 15px;
+    right: -30px;
+    transform: rotate(45deg);
+
+    background: var(--accent);
+    color: #000;
+
+    padding: 5px 30px;
+    font-size: 0.7rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    pointer-events: none;
+}
+
+/* =========================================
+   7. PROJETS SECTION
+   ========================================= */
+#projets {
+    padding: 100px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+#projet_pres {
+    text-align: center;
+    font-size: 1.8rem;
+    margin-bottom: 80px;
+    background: linear-gradient(180deg, #fff, #64748b);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+#projets_rangement {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    perspective: 1000px;
+}
+
+#ligne1,
+#ligne2 {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    flex: 1;
+}
+
+.projets_container {
+    background-color: var(--bg-card);
+    padding: 25px;
+    border-radius: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.03);
+    transition: all 0.4s var(--ease);
+    position: relative;
+    overflow: hidden;
+}
+
+.projets_container:hover {
+    transform: translateY(-10px);
+    border-color: rgba(59, 130, 246, 0.3);
+    box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.7),
+        0 0 20px rgba(59, 130, 246, 0.1);
+}
+
+.projets_img {
+    display: block;
+    overflow: hidden;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.projets_img img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    transition: filter 0.5s ease, transform 0.5s var(--ease);
+}
+
+.projets_container:hover .projets_img img {
+    filter: grayscale(0%) contrast(1);
+    transform: scale(1.05);
+}
+
+.projets_nom {
+    font-size: 1.25rem;
+    color: #fff;
+    margin-top: 10px;
+}
+
+#projets_plus {
+    text-align: center;
+    margin-top: 80px;
+}
+
+#btn_plus {
+    padding: 15px 40px;
+    border-radius: 50px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    font-family: "poppins_semi_bold";
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    transition: all 0.3s ease-in-out;
+}
+
+#btn_plus:hover {
+    background: var(--accent);
+    border-color: var(--accent);
+    color: #fff;
+    box-shadow: 0 0 30px rgba(59, 130, 246, 0.4);
+}
+
+/* =========================================
+   8. CONTACT & FOOTER
+   ========================================= */
+#contact {
+    padding: 120px 20px;
+    text-align: center;
+    background: radial-gradient(circle at center, #0f172a 0%, var(--bg-body) 70%);
+}
+
+#contact_titre {
+    font-size: 1.5rem;
+    margin-bottom: 50px;
+    color: var(--text-main);
+}
+
+#liens_container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+#liens_container a {
+    padding: 15px 35px;
+    border-radius: 12px;
+    background: var(--bg-card);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    font-weight: 600;
+}
+
+#liens_container a:hover {
+    background: #fff;
+    color: #000;
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(255, 255, 255, 0.1);
+}
+
+footer {
+    padding: 40px;
+    text-align: center;
+    border-top: 1px solid rgba(255, 255, 255, 0.02);
+}
+
+footer h4 {
+    font-weight: 400;
+    color: #334155;
+    font-size: 0.8rem;
+}
+
+/* =========================================
+   9. ANIMATIONS & FX
+   ========================================= */
+
+/* Entrée fantôme (Blur + Slide Up) */
+@keyframes ghostRise {
+    0% {
+        opacity: 0;
+        transform: translateY(40px);
+        filter: blur(10px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+        filter: blur(0);
+    }
+}
+
+/* Défilement infini du Marquee */
+@keyframes scrollInfinite {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+/* Classes pour le JS IntersectionObserver */
+.hidden-scroll {
+    opacity: 0;
+    transform: translateY(50px);
+    filter: blur(5px);
+    transition: all 1s var(--ease);
+}
+
+.show-scroll {
+    opacity: 1;
+    transform: translateY(0);
+    filter: blur(0);
+}
+
+/* Background Blobs (Flottement) */
+.background-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: -1;
+    overflow: hidden;
+    background: var(--bg-body);
+    /* Fond uni */
+}
+
+.blob {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(80px);
+    opacity: 0.4;
+    animation: float 10s infinite alternate ease-in-out;
+}
+
+.blob-1 {
+    width: 500px;
+    height: 500px;
+    background: #3b82f6;
+    top: -100px;
+    left: -100px;
+}
+
+.blob-2 {
+    width: 400px;
+    height: 400px;
+    background: #6366f1;
+    bottom: -50px;
+    right: -50px;
+    animation-delay: -5s;
+}
+
+.blob-3 {
+    width: 300px;
+    height: 300px;
+    background: #0ea5e9;
+    top: 40%;
+    left: 40%;
+    animation-duration: 15s;
+}
+
+@keyframes float {
+    0% {
+        transform: translate(0, 0) scale(1);
+    }
+
+    100% {
+        transform: translate(30px, 50px) scale(1.1);
+    }
+}
+
+/* Curseur Glow (Lumière ambiante) */
+#cursor-glow {
+    position: fixed;
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(circle, rgba(56, 189, 248, 0.08) 0%, rgba(0, 0, 0, 0) 60%);
+    border-radius: 50%;
+    pointer-events: none;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+    mix-blend-mode: screen;
+    transition: opacity 0.3s ease;
+}
+
+/* =========================================
+   10. RESPONSIVE
+   ========================================= */
+@media (max-width: 768px) {
+    .header {
+        justify-content: space-between;
+        padding: 20px;
+    }
+
+    #nom {
+        font-size: 2.8rem;
+    }
+
+    #projets_rangement {
+        flex-direction: column;
+    }
+
+    #ligne1,
+    #ligne2 {
+        width: 100%;
+        gap: 20px;
+    }
+
+}

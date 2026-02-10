@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mes Projets | Johann Paimboeuf</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="projets.css">
+    <link rel="stylesheet" href="fonts.css">
+</head>
+
+<body>
+
+    <div class="background-container">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+    </div>
+    <div id="cursor-glow"></div>
+
+    <nav class="header spread">
+        <a href="index.html" class="back-link">← Retour à l'accueil</a>
+        
+        <div class="header-socials">
+            <a href="https://github.com/Corblack" target="_blank">GitHub</a>
+            <a href="https://www.linkedin.com/in/johann-paimboeuf" target="_blank">LinkedIn</a>
+            <a href="media/CV Johann Paimboeuf.pdf" download="CV" target="_blank">CV</a>
+        </div>
+    </nav>
+
+    <div id="projects-hero">
+        <h1 class="page-title">Exploration & <span class="text-accent">Code</span></h1>
+        <p class="page-subtitle">Une sélection de mes travaux personnels et scolaires.</p>
+    </div>
+
+    <div id="projects-grid-container">
+        
+        <div class="projets_container hidden-scroll">
+            <div class="projets_img">
+                <img src="media/img/Lime.png" alt="Versus Fighting C#">
+            </div>
+            <div class="project-tags">
+                <span class="tag">C#</span>
+                <span class="tag">Jeu 2D</span>
+            </div>
+            <h3 class="projets_nom">TeamLime : Versus Fighting</h3>
+            <p class="project-desc">Jeu de combat développé en C# avec gestion physique et animations.</p>
+            
+            <div class="project-buttons">
+                <a href="https://corblack.github.io/TeamLime/" target="_blank" class="btn-project demo">Voir Site</a>
+                <a href="https://github.com/ZRThom/Fighter-LIME-TEAM" target="_blank" class="btn-project code">Voir Code</a>
+            </div>
+        </div>
+
+        <div class="projets_container hidden-scroll">
+            <div class="projets_img">
+                <img src="media/img/instacheck.png" alt="Tool Insta Checker">
+            </div>
+            <div class="project-tags">
+                <span class="tag">Python</span>
+                <span class="tag">Auto</span>
+            </div>
+            <h3 class="projets_nom">Tool : Insta Checker</h3>
+            <p class="project-desc"> gestion de comptes via JSON.</p>
+
+            <div class="project-buttons">
+                <a href="#" class="btn-project demo disabled">Pas de démo</a>
+                <a href="https://github.com/Corblack/Insta-Checker" target="_blank" class="btn-project code">Voir Code</a>
+            </div>
+        </div>
+
+        <div class="projets_container hidden-scroll">
+            <div class="projets_img">
+                <img src="media/img/gameoflife.png" alt="Simulation Game of Life">
+            </div>
+            <div class="project-tags">
+                <span class="tag">Algo</span>
+                <span class="tag">Simu</span>
+            </div>
+            <h3 class="projets_nom">Simulation : Game of Life</h3>
+            <p class="project-desc">Reproduction de l'automate cellulaire de Conway.</p>
+
+            <div class="project-buttons">
+                <a href="https://github.com/Corblack/game-of-life" target="_blank" class="btn-project demo">Jouer</a>
+                <a href="https://github.com/Corblack/game-of-life" target="_blank" class="btn-project code">Voir Code</a>
+            </div>
+        </div>
+
+        <div class="projets_container hidden-scroll">
+            <div class="projets_img">
+                <img src="media/img/portfolio.png" alt="Portfolio V1">
+            </div>
+            <div class="project-tags">
+                <span class="tag">Web</span>
+                <span class="tag">Design</span>
+            </div>
+            <h3 class="projets_nom">Portfolio V1</h3>
+            <p class="project-desc">Design et intégration de ce site vitrine.</p>
+
+            <div class="project-buttons">
+                <a href="index.html" target="_blank" class="btn-project demo">Voir Site</a>
+                <a href="#" class="btn-project code">Voir Code</a>
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+        // Scroll Reveal
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('show-scroll');
+                }
+            });
+        });
+        document.querySelectorAll('.hidden-scroll').forEach((el) => observer.observe(el));
+    </script>
+</body>
+</html>
