@@ -1,6 +1,6 @@
 <div align="center">
   <br />
-  <h1>⚡ Portfolio V1 | Johann Paimboeuf</h1>
+  <h1>Portfolio | Johann Paimboeuf</h1>
   <br />
 
   <a href="https://johannpmbf.fr">
