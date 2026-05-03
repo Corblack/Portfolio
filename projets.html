@@ -20,7 +20,7 @@
 
     <nav class="header spread">
         <a href="index.html" class="back-link">← Retour à l'accueil</a>
-        
+
         <div class="header-socials">
             <a href="https://github.com/Corblack" target="_blank">GitHub</a>
             <a href="https://www.linkedin.com/in/johann-paimboeuf" target="_blank">LinkedIn</a>
@@ -34,7 +34,7 @@
     </div>
 
     <div id="projects-grid-container">
-        
+
         <div class="projets_container hidden-scroll">
             <div class="projets_img">
                 <img src="media/img/Lime.png" alt="Versus Fighting C#">
@@ -45,10 +45,10 @@
             </div>
             <h3 class="projets_nom">TeamLime : Versus Fighting</h3>
             <p class="project-desc">Jeu de combat développé en C# avec gestion physique et animations.</p>
-            
+
             <div class="project-buttons">
-                <a href="https://corblack.github.io/TeamLime/" target="_blank" class="btn-project demo">Voir Site</a>
-                <a href="https://github.com/ZRThom/Fighter-LIME-TEAM" target="_blank" class="btn-project code">Voir Code</a>
+                <a href="https://github.com/Corblack/TeamLime" target="_blank" class="btn-project demo">Voir Site</a>
+                <a href="https://tezc4t.itch.io/vaporis-fighters" target="_blank" class="btn-project code">Voir Jeu</a>
             </div>
         </div>
 
@@ -65,7 +65,8 @@
 
             <div class="project-buttons">
                 <a href="#" class="btn-project demo disabled">Pas de démo</a>
-                <a href="https://github.com/Corblack/Insta-Checker" target="_blank" class="btn-project code">Voir Code</a>
+                <a href="https://github.com/Corblack/Insta-Checker" target="_blank" class="btn-project code">Voir
+                    Code</a>
             </div>
         </div>
 
@@ -82,7 +83,8 @@
 
             <div class="project-buttons">
                 <a href="https://github.com/Corblack/game-of-life" target="_blank" class="btn-project demo">Jouer</a>
-                <a href="https://github.com/Corblack/game-of-life" target="_blank" class="btn-project code">Voir Code</a>
+                <a href="https://github.com/Corblack/game-of-life" target="_blank" class="btn-project code">Voir
+                    Code</a>
             </div>
         </div>
 
@@ -103,18 +105,35 @@
             </div>
         </div>
 
-    </div>
+        <div class="projets_container hidden-scroll">
+            <div class="projets_img">
+                <img src="media/VirtualCard.png" alt="Aperçu VirtualCard Pro">
+            </div>
+            <div class="project-tags">
+                <span class="tag">PHP</span>
+                <span class="tag">MySQL</span>
+                <span class="tag">SaaS</span>
+            </div>
+            <h3 class="projets_nom">VirtualCard Pro</h3>
+            <p class="project-desc">Plateforme SaaS permettant de générer et gérer des cartes de visite numériques via
+                des QR Codes dynamiques.</p>
 
-    <script>
-        // Scroll Reveal
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach((entry) => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('show-scroll');
-                }
+            <div class="project-buttons">
+                <a href="https://card.johannpmbf.fr" target="_blank" class="btn-project demo">Voir Site</a>
+            </div>
+        </div>
+
+        <script>
+            // Scroll Reveal
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('show-scroll');
+                    }
+                });
             });
-        });
-        document.querySelectorAll('.hidden-scroll').forEach((el) => observer.observe(el));
-    </script>
+            document.querySelectorAll('.hidden-scroll').forEach((el) => observer.observe(el));
+        </script>
 </body>
+
 </html>
